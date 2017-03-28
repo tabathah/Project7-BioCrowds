@@ -1,10 +1,12 @@
 const path = require('path');
 
 module.exports = {
-  entry: path.join(__dirname, "src/main"),
+  entry: {
+    'build/bundle': path.join(__dirname, "src/main"),
+  },
   output: {
-    path: path.join(__dirname, "build"),
-    filename: "bundle.js"
+    path: __dirname,
+    filename: "[name].js"
   },
   module: {
     loaders: [
