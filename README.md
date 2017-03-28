@@ -11,7 +11,7 @@ I used stratified sampling to find 10 samples for every cell in my 20 x 20 grid 
 
 When I added in obstacles to the simulation, I stopped the agents from entering those obstacles and passing through them by not placing markers at those obstacles positions. Here is a picture of the markers when an obstacle was on the board:
 
-![](./markersNoOB.PNG)
+![](./markersNoOb.PNG)
 
 In order to assign markers to the agents I used the following process: I went through each of the markers on my grid and for each of them, I had a variable closestDist, which was set to the radius I wanted to search for markers around the agent, and a variable closestAgent, which was set to undefined. I went through each of the agents, reassigning closestDist and closestAgent if a closer agent than the search radius distance away. If closestAgent was defined, then that agent was given the marker to "own". This process ensured each marker would only be assigned to one unique agent.
 
